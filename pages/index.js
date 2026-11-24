@@ -148,14 +148,112 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Subash Poudel - Personal Portfolio</title>
-        <meta name="description" content="Subash Poudel - Personal Portfolio" />
+        <title>Subash Poudel - Full Stack Developer | React, Next.js, MongoDB Expert</title>
+        <meta name="description" content="Subash Poudel - Professional Full Stack Developer with 5+ years experience. Expert in React, Next.js, MongoDB, JavaScript. 20+ projects completed. Available for web development, mobile apps & SEO services in Nepal." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="Subash Poudel" />
+        <meta name="keywords" content="Subash Poudel, Full Stack Developer, React Developer, Next.js Developer, MongoDB Expert, JavaScript Developer, Web Developer Nepal, Frontend Developer, Backend Developer, MERN Stack Developer, Full Stack Engineer" />
+        <link rel="canonical" href="https://subashpoudel.com" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Subash Poudel - Full Stack Developer | React, Next.js, MongoDB Expert" />
+        <meta property="og:description" content="Professional Full Stack Developer Subash Poudel with 5+ years experience. Expert in React, Next.js, MongoDB, JavaScript. 20+ projects completed. Available for web development services." />
+        <meta property="og:image" content="https://subashpoudel.com/img/me.png" />
+        <meta property="og:url" content="https://subashpoudel.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Subash Poudel - Full Stack Developer" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Subash Poudel - Full Stack Developer | React, Next.js Expert" />
+        <meta name="twitter:description" content="Professional Full Stack Developer with 5+ years experience. Expert in React, Next.js, MongoDB. 20+ projects completed." />
+        <meta name="twitter:image" content="https://subashpoudel.com/img/me.png" />
+        <meta name="twitter:creator" content="@subashpoudel" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="geo.region" content="NP" />
+        <meta name="geo.placename" content="Nepal" />
+        <meta name="language" content="English" />
+        <meta name="rating" content="General" />
+        <meta name="distribution" content="Global" />
+        
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        
+        {/* Structured Data - Person Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Subash Poudel",
+              "jobTitle": "Full Stack Developer",
+              "description": "Professional Full Stack Developer with 5+ years experience specializing in React, Next.js, MongoDB, and JavaScript development.",
+              "url": "https://subashpoudel.com",
+              "image": "https://subashpoudel.com/img/me.png",
+              "sameAs": [
+                "https://www.linkedin.com/in/subash-poudel-766088380/",
+                "https://github.com/subashpoudel24",
+                "https://www.instagram.com/subash.poudel58/"
+              ],
+              "knowsAbout": [
+                "Full Stack Development",
+                "React.js",
+                "Next.js",
+                "MongoDB",
+                "JavaScript",
+                "Web Development",
+                "Mobile Development",
+                "SEO",
+                "Digital Marketing"
+              ],
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Patan Multiple Campus (Tribhuvan University)"
+              },
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Adhyaaya Digital Technologies Pvt. Ltd."
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Nepal"
+              }
+            })
+          }}
+        />
+        
+        {/* Professional Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Subash Poudel - Full Stack Development Services",
+              "description": "Professional full stack development services including web development, mobile app development, and digital marketing by Subash Poudel.",
+              "provider": {
+                "@type": "Person",
+                "name": "Subash Poudel"
+              },
+              "areaServed": "Worldwide",
+              "serviceType": [
+                "Full Stack Development",
+                "Web Development",
+                "Mobile App Development",
+                "Digital Marketing",
+                "SEO Services"
+              ],
+              "url": "https://subashpoudel.com"
+            })
+          }}
+        />
       </Head>
 
       {/* hero section */}
-      <section className="hero">
+      <section className="hero" itemScope itemType="https://schema.org/Person">
         <div className="intro_text">
           <svg viewBox="0 0 1320 300">
             <text x="50%" y="50%" text-anchor="middle" className="animate-stroke">SUBASH</text>
@@ -164,21 +262,21 @@ export default function Home() {
         <div className="container">
           <div className="flex w-100">
             <div className="heroinfoleft">
-              <span className="hero_sb_title" data-aos="fade-right" >I am Subash Poudel</span>
-              <h1 className="hero_title" data-aos="fade-right" >Web Developer + <br /> <span className="typed-text">UX Designer</span> </h1>
+              <span className="hero_sb_title" data-aos="fade-right" itemProp="name">I am Subash Poudel</span>
+              <h1 className="hero_title" data-aos="fade-right" itemProp="jobTitle">Full Stack Developer + <br /> <span className="typed-text">UX Designer</span> </h1>
               <div className="hero_img_box heroimgbox" data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">
-                <img src="/img/me2.png" alt="" />
+                <img src="/img/me.png" alt="Subash Poudel - Full Stack Developer" itemProp="image" />
               </div>
-              <div className="lead" data-aos="fade-up"  >I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</div>
+              <div className="lead" data-aos="fade-up" itemProp="description">Professional Full Stack Developer specializing in React, Next.js, and MongoDB. I create scalable web solutions and mobile applications that connect businesses with their customers worldwide.</div>
               <div className="hero_btn_box" data-aos="fade-up">
-                <Link href='/' download={'/img/resume.pdf'} className="download_cv">Download CV <BiDownload /></Link>
+                <Link href='/img/resume.pdf' download={'/img/resume.pdf'} className="download_cv">Download CV <BiDownload /></Link>
                 <ul className="hero_social">
                   <li><a href="https://www.instagram.com/subash.poudel58/"><FaInstagram /></a></li>
                   <li><a href="/"><LiaBasketballBallSolid /></a></li>
                   <li><a href="https://www.linkedin.com/in/subash-poudel-766088380/"><GrLinkedinOption /></a></li>
-                  <li><a href="https://github.com/subash-dev-web"><FaGithub /></a></li>
+                  <li><a href="https://github.com/subashpoudel24/"><FaGithub /></a></li>
                 </ul>
               </div>
             </div>
@@ -186,7 +284,7 @@ export default function Home() {
               <div className="hero_img_box" data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">
-                <img src='/img/me.png' alt="" />
+                <img src='/img/me.png' alt="Subash Poudel - Professional Full Stack Developer and UX Designer" itemProp="image" />
               </div>
             </div>
           </div>
@@ -216,11 +314,11 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="services">
+      <section className="services" itemScope itemType="https://schema.org/Service">
         <div className="container">
           <div className="services_titles">
-            <h2 data-aos="fade-up">My Quality Services</h2>
-            <p data-aos="fade-up">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+            <h2 data-aos="fade-up" itemProp="name">Professional Full Stack Development Services</h2>
+            <p data-aos="fade-up" itemProp="description">Subash Poudel offers comprehensive full stack development services including web development, mobile app development, and digital marketing solutions to help businesses grow online.</p>
           </div>
           <div className="services_menu" data-aos="fade-up">
             {services.map((service, index) => (
@@ -245,11 +343,11 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section className="projects">
+      <section className="projects" itemScope itemType="https://schema.org/CreativeWork">
         <div className="container">
           <div className="project_titles">
-            <h2 data-aos="fade-up">My Recent Works</h2>
-            <p data-aos="fade-up">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+            <h2 data-aos="fade-up" itemProp="name">Full Stack Development Portfolio - Recent Projects</h2>
+            <p data-aos="fade-up" itemProp="description">Explore Subash Poudel's recent full stack development projects including web applications, e-commerce sites, and mobile apps built with React, Next.js, and MongoDB.</p>
           </div>
           <div className="project_buttons" data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
@@ -287,12 +385,12 @@ export default function Home() {
       </section>
 
       {/* Experience study */}
-      <section className="exstudy">
+      <section className="exstudy" itemScope itemType="https://schema.org/Person">
         <div className="container flex flex-left flex-sb">
-          <div className="experience">
+          <div className="experience" itemProp="workExperience" itemScope itemType="https://schema.org/WorkExperience">
             <div className="experience_title flex gap-1" data-aos="fade-right">
               <LuMedal />
-              <h2>My Experience</h2>
+              <h2 itemProp="name">Full Stack Developer Experience</h2>
             </div>
             <div className="exper_cards">
               <div className="exper_card" data-aos="fade-up">
@@ -317,10 +415,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="education">
+          <div className="education" itemProp="alumniOf" itemScope itemType="https://schema.org/EducationalOrganization">
             <div className="experience_title flex gap-1" data-aos="fade-left">
               <PiGraduationCap />
-              <h2>My Education</h2>
+              <h2 itemProp="name">Educational Background - Computer Science</h2>
             </div>
             <div className="exper_cards">
               <div className="exper_card" data-aos="fade-up">
@@ -339,11 +437,11 @@ export default function Home() {
       </section>
 
       {/* My Skills */}
-      <section className="myskills">
+      <section className="myskills" itemScope itemType="https://schema.org/Person">
         <div className="container">
           <div className="myskills_title">
-            <h2 data-aos="fade-up">My Skills</h2>
-            <p data-aos="fade-up">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+            <h2 data-aos="fade-up" itemProp="knowsAbout">Full Stack Developer Technical Skills</h2>
+            <p data-aos="fade-up">Subash Poudel's expertise in modern web technologies including React, Next.js, MongoDB, JavaScript, and other cutting-edge full stack development tools.</p>
           </div>
           <div className="myskils_cards">
             <div className="mys_card" data-aos="fade-right">

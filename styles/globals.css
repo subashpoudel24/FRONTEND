@@ -246,6 +246,8 @@ img {
     /* max-width: 1320px; */
     max-width: 1400px;
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .full-h {
@@ -324,6 +326,12 @@ header {
     padding: 3rem 1rem;
     z-index: 99;
     transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 2rem 1rem;
+    }
 }
 
 header.sticky {
@@ -559,6 +567,16 @@ header.sticky {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 150px 1rem 30px;
+    }
 }
 
 .dark .hero {
@@ -1216,6 +1234,13 @@ header.sticky {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .projects_cards {
+        justify-content: center;
+    }
 }
 
 .projects_cards::before {
@@ -1501,6 +1526,14 @@ header.sticky {
     justify-content: center;
     gap: 1rem;
     margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .myskils_cards {
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
 }
 
 .mys_card {
@@ -2814,7 +2847,7 @@ header.sticky {
 .pricingcard h2 span {
     font-size: 18px;
     font-weight: 500;
-    color: #ad8cef;
+    color: #3B82F6;
 }
 
 .pricingcard h4 {
@@ -4382,6 +4415,7 @@ header.sticky {
 @media screen and (max-width: 1412px) {
     .container {
         max-width: 1200px;
+        padding: 0 1rem;
     }
 
     .hero_title {
@@ -4465,6 +4499,7 @@ header.sticky {
 
     .container {
         max-width: 1000px;
+        padding: 0 1rem;
     }
 
     .hero_title {
@@ -4485,6 +4520,25 @@ header.sticky {
         width: 100%;
     }
 
+    .hero {
+        padding: 200px 1rem 50px;
+    }
+
+    .services {
+        padding: 80px 1rem;
+    }
+
+    .projects {
+        padding: 80px 1rem;
+    }
+
+    .exstudy {
+        padding: 80px 1rem;
+    }
+
+    .myskills {
+        padding: 80px 1rem;
+    }
 }
 
 @media screen and (max-width: 1060px) {
@@ -4729,26 +4783,74 @@ header.sticky {
 }
 
 @media screen and (max-width: 720px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 150px 1rem 30px;
+    }
+
     .hero_title {
         font-size: 45px;
+        line-height: 1.1;
+    }
+
+    .hero_sb_title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 16px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero_btn_box {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .download_cv {
+        font-size: 16px;
+        padding: 18px 30px;
     }
 
     .funfect_item {
         width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .funfect_item h3 {
+        font-size: 40px;
+    }
+
+    .funfect_item h4 {
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 60px 1rem;
+    }
+
+    .services_titles h2 {
+        font-size: 35px;
+    }
+
+    .services_titles p {
+        font-size: 16px;
     }
 
     .project_buttons {
         flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     .project_buttons button {
         font-size: 16px;
-        padding: 0.8rem;
-    }
-
-    .services_titles {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0.8rem 1.5rem;
     }
 
     .left_s_box h3 {
@@ -4759,17 +4861,64 @@ header.sticky {
         font-size: 15px;
     }
 
+    .hero_img_box {
+        width: 300px;
+        height: 350px;
+    }
+
     .hero_img_box img {
         transform: none;
         border: 2px solid var(--main-site-color);
     }
 
     .projects {
-        padding: 8rem 1rem;
+        padding: 60px 1rem;
+    }
+
+    .project_titles h2 {
+        font-size: 35px;
+    }
+
+    .project_titles p {
+        font-size: 16px;
     }
 
     .myskills {
-        padding: 3rem 1rem;
+        padding: 60px 1rem;
+    }
+
+    .myskills_title h2 {
+        font-size: 35px;
+    }
+
+    .myskills_title p {
+        font-size: 16px;
+    }
+
+    .myskils_cards {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .mys_card {
+        max-width: 150px;
+    }
+
+    .mys_inner {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .mys_card img {
+        max-width: 50px;
+        margin-bottom: 20px;
+    }
+
+    .exstudy {
+        padding: 60px 1rem;
+    }
+
+    .experience_title h2 {
+        font-size: 30px;
     }
 
     .re_blog {
@@ -4916,65 +5065,237 @@ header.sticky {
 }
 
 @media screen and (max-width: 450px) {
-    .hero_sb_title {
-        font-size: 22px;
-    }
-
-    .hero_title {
-        font-size: 35px;
-    }
-
-    .hero_img_box {
-        width: 375px;
-        height: 400px;
+    .container {
+        padding: 0 0.5rem;
     }
 
     .hero {
-        padding: 15rem 1rem;
-        padding-bottom: 5rem;
+        padding: 120px 0.5rem 30px;
     }
 
-    .funfect_item h3 {
-        font-size: 35px;
+    .hero_sb_title {
+        font-size: 18px;
+        text-align: center;
     }
 
-    .funfect_item h4 {
-        font-size: 13px;
+    .hero_title {
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.2;
     }
 
-    .funfect_item {
-        margin: 1rem 0;
+    .hero_img_box {
+        width: 280px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    .lead {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .hero_btn_box {
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .download_cv {
+        font-size: 14px;
+        padding: 15px 25px;
+    }
+
+    .hero_social {
+        justify-content: center;
+    }
+
+    .hero_social li a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero_social li a svg {
+        font-size: 16px;
     }
 
     .funfect_area {
-        margin-top: 2rem;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .funfect_item {
+        width: 45%;
+        margin: 0.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .funfect_item h3 {
+        font-size: 28px;
+    }
+
+    .funfect_item h4 {
+        font-size: 12px;
+        line-height: 1.3;
     }
 
     .services {
-        padding-top: 3rem;
+        padding: 40px 0.5rem;
     }
 
-    .project_titles h2,
     .services_titles h2 {
-        font-size: 35px;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
-    .project_titles p,
     .services_titles p {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .services_item {
+        padding: 0 15px;
+    }
+
+    .left_s_box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .left_s_box h3 {
+        font-size: 18px;
+    }
+
+    .right_s_box {
+        padding-right: 5%;
+    }
+
+    .right_s_box p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .projects {
+        padding: 40px 0.5rem;
+    }
+
+    .project_titles h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .project_titles p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .project_buttons {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        justify-content: center;
+    }
+
+    .project_buttons button {
+        font-size: 14px;
+        padding: 0.6rem 1rem;
+    }
+
+    .procard {
+        width: 100%;
+        height: 300px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .procontentbox h2 {
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+    }
+
+    .procontentbox svg {
+        font-size: 25px;
     }
 
     .exstudy {
-        padding: 3rem 1rem;
+        padding: 40px 0.5rem;
+    }
+
+    .experience_title h2 {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .experience_title svg {
+        font-size: 35px;
+    }
+
+    .exper_card {
+        padding: 1rem;
+    }
+
+    .exper_card span {
+        font-size: 18px;
+    }
+
+    .exper_card h3 {
+        font-size: 20px;
+    }
+
+    .exper_card p {
+        font-size: 14px;
+    }
+
+    .myskills {
+        padding: 40px 0.5rem;
+    }
+
+    .myskills_title h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .myskills_title p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .myskils_cards {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .mys_card {
+        max-width: 120px;
+    }
+
+    .mys_inner {
+        padding: 1rem 2rem;
+    }
+
+    .mys_card img {
+        max-width: 40px;
+        margin-bottom: 15px;
+    }
+
+    .mys_inner h3 {
+        font-size: 16px;
+    }
+
+    .mys_card p {
+        font-size: 14px;
+    }
+
+    .hero .intro_text svg {
+        display: none;
     }
 
     .shoppagetoptitle h2 {
         font-size: 35px;
-    }
-
-    .procontentbox h2 {
-        font-size: 15px;
-        margin-bottom: 0;
     }
 
     .rightcontinputs {
@@ -5016,9 +5337,9 @@ header.sticky {
     }
 
     .fpost {
-        min-width: 347px;
-        max-width: 347px;
-        height: 350px;
+        min-width: 280px;
+        max-width: 280px;
+        height: 300px;
     }
 
     .featuredposts {
@@ -5032,17 +5353,57 @@ header.sticky {
     .populartegssec {
         padding: 0 1rem;
     }
-
 }
 
 @media screen and (max-width: 410px) {
     .hero_img_box {
-        width: 315px;
-        height: 365px;
+        width: 250px;
+        height: 280px;
     }
 
     .hero {
-        padding: 10rem 1rem;
+        padding: 100px 0.5rem 20px;
+    }
+
+    .hero_title {
+        font-size: 24px;
+    }
+
+    .hero_sb_title {
+        font-size: 16px;
+    }
+
+    .lead {
+        font-size: 13px;
+    }
+
+    .funfect_item {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .funfect_item h3 {
+        font-size: 24px;
+    }
+
+    .funfect_item h4 {
+        font-size: 11px;
+    }
+
+    .services_titles h2 {
+        font-size: 24px;
+    }
+
+    .project_titles h2 {
+        font-size: 24px;
+    }
+
+    .myskills_title h2 {
+        font-size: 24px;
+    }
+
+    .experience_title h2 {
+        font-size: 22px;
     }
 
     .logo h2 {
@@ -5060,15 +5421,124 @@ header.sticky {
     .galeryimgiteminfo h2 {
         font-size: 18px
     }
+
+    .mys_card {
+        max-width: 100px;
+    }
+
+    .mys_inner {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .mys_card img {
+        max-width: 35px;
+    }
+
+    .procard {
+        height: 250px;
+        padding: 1rem;
+    }
 }
 
 @media screen and (max-width: 380px) {
+    .hero {
+        padding: 90px 0.3rem 15px;
+    }
+
+    .hero_title {
+        font-size: 22px;
+    }
+
+    .hero_sb_title {
+        font-size: 15px;
+    }
+
+    .hero_img_box {
+        width: 220px;
+        height: 250px;
+    }
+
+    .download_cv {
+        font-size: 13px;
+        padding: 12px 20px;
+    }
+
+    .hero_social li a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero_social li a svg {
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 30px 0.3rem;
+    }
+
+    .projects {
+        padding: 30px 0.3rem;
+    }
+
+    .exstudy {
+        padding: 30px 0.3rem;
+    }
+
+    .myskills {
+        padding: 30px 0.3rem;
+    }
+
+    .services_titles h2,
+    .project_titles h2,
+    .myskills_title h2 {
+        font-size: 20px;
+    }
+
+    .services_titles p,
+    .project_titles p,
+    .myskills_title p {
+        font-size: 12px;
+    }
+
+    .left_s_box h3 {
+        font-size: 16px;
+    }
+
+    .right_s_box p {
+        font-size: 12px;
+    }
+
+    .project_buttons button {
+        font-size: 12px;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .mys_card {
+        max-width: 90px;
+    }
+
+    .mys_inner {
+        padding: 0.6rem 1rem;
+    }
+
+    .mys_card img {
+        max-width: 30px;
+    }
+
+    .mys_inner h3 {
+        font-size: 14px;
+    }
+
+    .mys_card p {
+        font-size: 12px;
+    }
+
     .leftsociinfo ul li {
         font-size: 16px;
     }
 
     .mobilenavlist {
-        width: 350px;
+        width: 300px;
     }
 
     .galeryimgiteminfo p {
@@ -5081,5 +5551,136 @@ header.sticky {
 
     .mobilelogo img {
         width: 50px;
+    }
+
+    .procard {
+        height: 220px;
+        padding: 0.8rem;
+    }
+
+    .procontentbox h2 {
+        font-size: 14px;
+    }
+
+    .experience_title h2 {
+        font-size: 18px;
+    }
+
+    .experience_title svg {
+        font-size: 30px;
+    }
+}
+
+/* Additional mobile responsive improvements */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 0.25rem;
+    }
+
+    .hero {
+        padding: 80px 0.25rem 15px;
+    }
+
+    .hero_title {
+        font-size: 20px;
+    }
+
+    .hero_sb_title {
+        font-size: 14px;
+    }
+
+    .hero_img_box {
+        width: 200px;
+        height: 220px;
+    }
+
+    .lead {
+        font-size: 12px;
+    }
+
+    .download_cv {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .services,
+    .projects,
+    .exstudy,
+    .myskills {
+        padding: 25px 0.25rem;
+    }
+
+    .services_titles h2,
+    .project_titles h2,
+    .myskills_title h2 {
+        font-size: 18px;
+    }
+
+    .funfect_item h3 {
+        font-size: 20px;
+    }
+
+    .funfect_item h4 {
+        font-size: 10px;
+    }
+
+    .mys_card {
+        max-width: 80px;
+    }
+
+    .mys_inner {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .mys_card img {
+        max-width: 25px;
+    }
+
+    .procard {
+        height: 200px;
+        padding: 0.5rem;
+    }
+
+    .mobilenavlist {
+        width: 280px;
+    }
+}
+
+/* Ensure proper touch targets for mobile */
+@media screen and (max-width: 768px) {
+    .hero_social li a,
+    .download_cv,
+    .project_buttons button {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services_item {
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+
+    .procard {
+        touch-action: manipulation;
+    }
+
+    /* Improve text readability on mobile */
+    .hero_title,
+    .hero_sb_title,
+    .lead {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        overflow-x: hidden;
     }
 }

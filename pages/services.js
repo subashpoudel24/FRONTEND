@@ -106,7 +106,7 @@ export default function services() {
                     </div>
                 </div>
             </div>
-            <div className="pricingplansec">
+            {/* <div className="pricingplansec">
                 <div className="container">
                     <div className="pricingtitles text-center">
                         <h3><img src="/img/chevron_right.png" alt="" /> PRICING PLAN</h3>
@@ -161,7 +161,7 @@ export default function services() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     </>

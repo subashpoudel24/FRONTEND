@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
 import useFetchData from "@/hooks/useFetchData";
+import { useState } from 'react';
 
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -83,7 +84,19 @@ export default function projectslug() {
 
     return <>
         <Head>
-            <title>{slug}</title>
+            <title>{alldata && alldata[0]?.title ? `${alldata[0].title} - Subash Poudel` : 'Project - Subash Poudel'}</title>
+            <meta name="description" content={alldata && alldata[0]?.description ? alldata[0].description.substring(0, 160) : 'View this amazing project by Subash Poudel - Full Stack Developer'} />
+            
+            {/* Open Graph */}
+            <meta property="og:title" content={alldata && alldata[0]?.title ? `${alldata[0].title} - Subash Poudel` : 'Project - Subash Poudel'} />
+            <meta property="og:description" content={alldata && alldata[0]?.description ? alldata[0].description.substring(0, 160) : 'View this amazing project by Subash Poudel'} />
+            <meta property="og:image" content={alldata && alldata[0]?.images[0] || '/img/me.png'} />
+            <meta property="og:type" content="article" />
+            
+            {/* Twitter */}
+            <meta name="twitter:title" content={alldata && alldata[0]?.title ? `${alldata[0].title} - Subash Poudel` : 'Project - Subash Poudel'} />
+            <meta name="twitter:description" content={alldata && alldata[0]?.description ? alldata[0].description.substring(0, 160) : 'View this amazing project by Subash Poudel'} />
+            <meta name="twitter:image" content={alldata && alldata[0]?.images[0] || '/img/me.png'} />
         </Head>
 
         <div className="projectslug">

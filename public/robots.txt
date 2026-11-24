@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://subashpoudel.com/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+
+# Allow important pages
+Allow: /
+Allow: /projects
+Allow: /blogs
+Allow: /services
+Allow: /contact
+Allow: /gallery
